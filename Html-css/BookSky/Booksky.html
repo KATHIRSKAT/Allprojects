@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Booksky</title>
+    <link rel="stylesheet" href="Booksky.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-container">
+        <h1>
+            Booksky
+        </h1>
+    </div>
+    <div class="container">
+        <div class="inner-container">
+        <h2>To Kill a Mockingbird</h2>
+        <h3>Harper Lee</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero illum eius tempora quis excepturi saepe laborum maxime unde rerum quibusdam aliquam dolore</p>
+        <button onclick="del(event)">Delete</button>
+        </div>
+    </div>
+    <button id="btn" class="btn" ><h3>+</h3></button>
+    <div class="bc"></div>
+    <div class="bc2">
+        <form>
+            <h1>Add Book</h1>
+            <input type="text" placeholder="Book Title" id="book-title">
+            <input type="text" placeholder="Author Name" id="auth-name">
+            <textarea placeholder="Short Description" id="desc"></textarea>
+            <button  id="ad1">Add</button>
+            <button  id="clo1" >Cancel</button>
+        </form>
+    </div>
+    <footer>
+        Developed by @arul
+    </footer>
+<script>
+var outlayer=document.querySelector(".bc")
+var innerform=document.querySelector(".bc2")
+var addbook=document.getElementById("btn")
+var res=document.querySelector(".container")
+addbook.addEventListener("click",function(){
+    outlayer.style.display="block"
+    innerform.style.display="block"
+})
+var title=document.getElementById("book-title")
+var authname=document.getElementById("auth-name")
+var des=document.getElementById("desc")
+var add1=document.getElementById("ad1")
+var close=document.getElementById("clo1")
+add1.addEventListener("click",function(event){
+    event.preventDefault()
+    var booktitle=title.value
+    var bookauth=authname.value
+    var bookdesc=des.value
+    console.log(booktitle)
+    console.log(bookauth)
+    console.log(bookdesc)
+    if(booktitle==''){
+        alert("Enter the Book Title...")
+    }else if(bookauth==''){
+        alert("Enter the Author Name...")
+    }else if(bookdesc==''){
+        alert("Enter the Description...")
+    }else{
+
+    var div=document.createElement("div")
+    div.setAttribute("class","inner-container")
+    div.innerHTML=`<h2>${booktitle}</h2><h3>${bookauth}</h3><p>${bookdesc}</p><button onclick="del(event)">Delete</button>`;  //`` --> it acts like template litrel  ${} --> to fetch value
+    res.append(div)
+    alert("Book Added !!!")
+    outlayer.style.display="none"
+    innerform.style.display="none"
+    }
+})
+close.addEventListener("click",function(event){
+    event.preventDefault()
+    outlayer.style.display="none"
+    innerform.style.display="none"
+})
+function del(event){
+    event.target.parentElement.remove()
+    alert("Book Deleted !!!")
+}
+</script>
+</body>
+</html>

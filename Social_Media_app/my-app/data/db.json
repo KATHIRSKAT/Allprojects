@@ -1,0 +1,30 @@
+{
+    "posts" :[
+    {
+        "id": 1,
+        "title": "My First Post",
+        "datetime" :"july 01,2021 11:17:36 AM",
+        "body": "made a vedio about tesla car"
+      },
+      {
+        "id": 2,
+        "title":"My second Post",
+        "datetime" :"july 01,2021 11:17:36 AM",
+        "body" : "made a vedio about tesla car"
+       
+      },
+      {
+        "id": 3,
+        "title": "My third Post",
+        "datetime" :"july 01,2021 !!:17:36 AM",
+        "body" : "made a vedio about tesla car"
+      },
+      {
+        "id": 4,
+        "title": "My fourt Post",
+        "datetime" :"july 01,2021 !!:17:36 AM",
+        "body" : "made a vedio about tesla car"
+      }
+]
+
+}

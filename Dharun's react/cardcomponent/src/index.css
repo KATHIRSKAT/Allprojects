@@ -1,0 +1,30 @@
+.Card-container
+{
+display:flex;
+ flex-direction: column;
+ width:200px;
+ height:300px;
+ border:5px solid black;
+ border-radius:5px;
+ 
+}
+.card-img
+{
+  
+  padding: 10px 10px 10px 10px;
+
+}
+.name
+{
+  font-family:Arial,sans-serif;
+  font-weight: bold;
+  font-size:30px;
+  text-align: center;
+  
+}
+.description
+{
+  font-family:Arial,sans-serif;
+  margin:2px 2px 2px 2px;
+  font-size:5px;
+}

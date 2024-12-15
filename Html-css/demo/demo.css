@@ -1,0 +1,15 @@
+.but{
+    background-color: red;
+    padding: 5px 6px 7px 8px;
+    margin-left: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.but:hover{
+    background-color: aliceblue;
+    
+    transition: background-color 3s;
+
+}

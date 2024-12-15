@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body>
+        <h1>Guess the Number between 1 and 10</h1>
+        <input id="in">
+        <button onclick="myfun()">Check</button>
+        <p id="Msg">You are right/wrong</p>
+        <p id="score">Score:10</p>
+        <script>
+            var total=10
+            var cmpNumber=Math.floor(Math.random()*10 +1)
+            function myfun()
+            {
+                    var a=document.getElementById("in")
+                    var num=Number(a.value)
+                    var m=document.getElementById("Msg")
+                    var finalscore=document.getElementById("score")
+                    if(num==cmpNumber)
+                    {
+                
+                    m.textContent="You are right"
+                    finalscore.textContent="Score:"+total
+                    }
+                    else
+                    {
+                        m.textContent="You are Wrong"
+                        total=total-1
+                        finalscore.textContent="Score:"+total
+
+                    }
+            }
+        </script>
+    </body>
+</html>
